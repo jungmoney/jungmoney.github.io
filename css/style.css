@@ -6,6 +6,10 @@ html, body{
     background-color: #6dbbeb;
 }
 
+ul {
+    list-style-type: none !important;
+}
+
 .reveal > .controls > div {
     opacity: 0.1;
 }
@@ -75,6 +79,10 @@ html, body{
   color: #288DC9;
 }
 
+.reveal .controls .fragmented{
+    opacity: 0.7 !important;
+}
+
 .color2 {
     color: #98D2F5 !important;
 }
@@ -82,4 +90,16 @@ html, body{
 .reveal p {
     margin-top: 50px;
     color: #288DC9 !important;
+}
+
+.reveal .progress{
+    height: 5px;
+}
+
+.reveal .progress span{
+    background-color: white;
+}
+
+#thank_you {
+    color: #288DC9;
 }
