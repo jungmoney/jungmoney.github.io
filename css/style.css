@@ -103,3 +103,77 @@ ul {
 #thank_you {
     color: #288DC9;
 }
+
+.reveal img {
+    margin-top: 40px;
+}
+
+#movies img{
+    height: 350px;
+    width: 250px;
+}
+
+.movies_slick{
+    cursor: pointer;
+    width: 800px;
+    margin-left: 100px !important;
+}
+
+.slick-dots{
+    text-align: center !important;
+}
+
+.snow_container{
+    position: absolute;
+    top:0;
+}
+
+#xmas h2{
+    color: #81b71a;
+}
+
+#xmas .visible{
+    cursor: pointer;
+    margin-top: 80px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#gift_container{
+    width:10px;
+    height:10px;
+    margin:auto;
+    margin-top: -160px;
+}
+
+#gift_content{
+    display:none;
+}
+
+#logo {
+    margin-top: 20px;
+}
+
+#code{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    width: 95%;
+    padding: 5px 0;
+    margin:auto;
+    margin-top: 20px;
+}
+
+#redeem{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    display:block;
+    margin-top: 20px;
+    transition: color 0.5s ease;
+}
+
+#redeem:hover{
+    color: #eee !important;
+}

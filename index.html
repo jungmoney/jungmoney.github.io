@@ -3,15 +3,27 @@
   <head>
     <title>Jung Money</title>
     <link rel="stylesheet" type="text/css" href="css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/reveal.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/ThreeCanvas.js"></script>
+    <script type="text/javascript" src="js/Snow.js"></script>
     <script src="js/script.js"></script>
   </head>
 
   <body>
     <audio id="audio_1">
       <source src="audio/1.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio_2">
+      <source src="audio/2.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio_3">
+      <source src="audio/3.mp3" type="audio/mpeg">
     </audio>
 
     <div class="reveal">
@@ -40,6 +52,13 @@
 	    <p>Awesome, now you know how to use this website. Please continue to the right for cool stuff. Hope you like it!</p>
 	  </section>
 	</section>
+
+        <section data-transition="zoom">
+          <h2>It's been crazy</h2>
+          <p>
+            So much has happened in the past few weeks of my life! You entered out of nowhere and I've never been happier. I'm so glad I met you :)
+          </p>
+        </section>
 
 	<section data-transition="zoom">
 	  <h2>Thank You For...</h2>
@@ -86,7 +105,7 @@
           <section>
             <h2>You're smart</h2>
             <p>
-              Damn girl, Stuy and MIT?? I see you acing those 18.02 tests
+              Damn girl, Stuy and MIT?? I see you acing those 18.02 tests :P You're a nerd and that's pretty hot.
             </p>
           </section>
 
@@ -113,196 +132,223 @@
 
         </section>
 
-	<section data-transition="zoom">
+	<section data-transition="zoom" id="song_2">
 	  <h2>Let's remember good times</h2>
           <p>
             It's only been a month but we've already made some pretty great memories...
           </p>
 	</section>
 
-	<section data-markdown>
-	  <script type="text/template">
-	    ## Markdown support
+	<section>
+          <section>
+	    <h2>We've studied hard</h2>
+            <img width="40%" height="40%" src="images/1_1.jpg">
+          </section>
 
-	    For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+          <section>
+            <h2>Okay, maybe not that hard</h2>
+            <img width="30%" height="30%" src="images/1_2.jpg">
+          </section>
 
-	    ```
-	    <section data-markdown>
-	      ## Markdown support
-
-	      For those of you who like that sort of thing.
-	      Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-	    </section>
-	    ```
-	  </script>
+          <section>
+            <h2>Actually...</h2>
+            <img width="70%" height="70%" src="images/1_3.jpg">
+            <p>
+              I don't think I've studied that much at all<br>I'll probably need to fix this lol
+            </p>
+            
+          </section>
 	</section>
 
-	<section id="transitions">
-	  <h2>Transition Styles</h2>
-	  <p>
-	    You can select from different transitions, like: <br>
-	    <a href="?transition=cube#/transitions">Cube</a> -
-	    <a href="?transition=page#/transitions">Page</a> -
-	    <a href="?transition=concave#/transitions">Concave</a> -
-	    <a href="?transition=zoom#/transitions">Zoom</a> -
-	    <a href="?transition=linear#/transitions">Linear</a> -
-	    <a href="?transition=fade#/transitions">Fade</a> -
-	    <a href="?transition=none#/transitions">None</a> -
-	    <a href="?#/transitions">Default</a>
-	  </p>
-	</section>
+        <section>
+          <section>
+            <h2>We've been total fatasses</h2>
+            <img width="40%" height="40%" src="images/2_1.jpg">
+          </section>
 
-	<section id="themes">
-	  <h2>Themes</h2>
-	  <p>
-	    Reveal.js comes with a few themes built in: <br>
-	    <a href="?#/themes">Default</a> -
-	    <a href="?theme=sky#/themes">Sky</a> -
-	    <a href="?theme=beige#/themes">Beige</a> -
-	    <a href="?theme=simple#/themes">Simple</a> -
-	    <a href="?theme=serif#/themes">Serif</a> -
-	    <a href="?theme=night#/themes">Night</a> <br>
-	    <a href="?theme=moon#/themes">Moon</a> -
-	    <a href="?theme=solarized#/themes">Solarized</a>
-	  </p>
-	  <p>
-	    <small>
-	      * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-	    </small>
-	  </p>
-	</section>
+          <section>
+            <h2>After Trashion</h2>
+            <img width="40%" height="40%" src="images/2_2.jpg">
+          </section>
+
+          <section>
+            <h2>Pho in Harvard Square</h2>
+            <img width="70%" height="70%" src="images/2_8.jpg">
+          </section>
+
+          <section>
+            <h2>At Sebastians</h2>
+            <img width="40%" height="40%" src="images/2_3.jpg">
+            <img width="40%" height="40%" src="images/2_4.jpg">
+          </section>
+
+          <section>
+            <h2>In the dorm</h2>
+            <img width="70%" height="70%" src="images/2_5.jpg">
+          </section>
+
+          <section>
+            <h2>Even with shitty<br>dining hall food</h2>
+            <img width="70%" height="70%" src="images/2_6.jpg">
+          </section>
+
+          <section>
+            <h2>But with good food too</h2>
+            <img width="40%" height="40%" src="images/2_7.jpg">
+          </section>
+        </section>
+
+        <section>
+          <h2>We've worked out</h2>
+          <p>So it's slightly more okay that we are fatasses</p>
+          <img width="40%" height="40%" src="images/3_1.jpg" style="vertical-align:top;">
+          <img width="40%" height="40%" src="images/3_2.jpg" style="vertical-align:top;">
+        </section>
+
+        <section id="movies">
+          <h2>We've watched a<br>bunch of movies</h2>
+          <div class="movies_slick">
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTI3MzYxMTA4NF5BMl5BanBnXkFtZTcwMDE4ODg3Mg@@._V1_SX214_AL_.jpg">
+            </div>
+            
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX640_SY720_.jpg">
+            </div>
+            
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTc0NjIyMjA2OF5BMl5BanBnXkFtZTcwMzIxNDE1MQ@@._V1_SX214_AL_.jpg">
+            </div>
+            
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTU5MzU2MzY2Nl5BMl5BanBnXkFtZTgwOTM4NzMxMDE@._V1_SY317_CR0,0,214,317_AL_.jpg">
+            </div>
+
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_SX214_AL_.jpg">
+            </div>
+
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTg3ODY5ODI1NF5BMl5BanBnXkFtZTgwMTkxNTYxMTE@._V1_SX640_SY720_.jpg">
+            </div>
+            
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTc0NzYxOTgxOF5BMl5BanBnXkFtZTcwMTgxMjc1MQ@@._V1_SY317_CR0,0,214,317_AL_.jpg">
+            </div>
+
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMjExNzM0NDM0N15BMl5BanBnXkFtZTcwMzkxOTUwNw@@._V1_SY317_CR0,0,214,317_AL_.jpg">
+            </div>
+
+            <div>
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SY317_CR0,0,214,317_AL_.jpg">
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <section>
+            <h2>We've done fun<br>stuff on campus</h2>
+            <img width="178" height="238" src="images/arrow.png" alt="Down arrow">
+          </section>
+
+          <section>
+            <h2>Katwalk</h2>
+            <img width="65%" src="images/5_1.jpg" style="vertical-align:top;">
+            <img width="29%" height="30%" src="images/5_2.jpg" style="vertical-align:top;">
+          </section>
+          
+          <section>
+            <h2>Trashion Show</h2>
+            <img width="29%" src="images/5_3.jpg">
+            <img width="65%" src="images/5_4.jpg">
+          </section>
+
+          <section>
+            <h2>Piano Recital</h2>
+            <img width="70%" src="images/5_5.jpg">
+          </section>
+
+          <section>
+            <h2>Logs Show</h2>
+            <img width="70%" src="images/5_6.jpg">
+          </section>
+
+          <section>
+            <h2>ADT Show</h2>
+            <img width="33%" src="images/5_7.jpg">
+            <img width="65%" src="images/5_8.jpg">
+          </section>
+        </section>
+
+        <section>
+          <section id="song_3">
+            <h2>We've partied!!!</h2>
+            <img width="85%" src="images/6_1.jpg">
+          </section>
+
+          <section>
+            <h2>That time at ZBT</h2>
+            <img width="75%" src="images/6_2.jpg">
+          </section>
+
+          <section>
+            <h2>Sometimes we go a<br>little too hard...</h2>
+            <img width="75%" src="images/6_3.jpg">
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Christmas in NYC!</h2>
+            <img width="40%" src="images/7_2.jpg">
+            <img width="40%" src="images/7_3.jpg">
+          </section>
+
+          <section>
+            <h2>Rockefeller Center</h2>
+            <img width="75%" src="images/7_1.jpg">
+          </section>
+
+          <section>
+            <h2>Trump Tower</h2>
+            <img width="75%" src="images/7_4.jpg">
+          </section>
+
+          <section>
+            <h2>FAO Schwarz</h2>
+            <img width="75%" src="images/7_5.jpg">
+          </section>
+
+          <section>
+            <h2>Fifth Avenue</h2>
+            <img width="40%" src="images/7_6.jpg">
+            <img width="40%" src="images/7_7.jpg">
+          </section>
+        </section>
 
 	<section>
-	  <h2>Global State</h2>
-	  <p>
-	    Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-	    will be added as a class to the document element when the slide is open. This lets you
-	    apply broader style changes, like switching the background.
-	  </p>
+	  <h2>I love you</h2>
+          <p>
+            Thanks for all the happy memories :) <br> Here's to even better times in 2015!
+          </p>
 	</section>
 
-	<section data-state="customevent">
-	  <h2>Custom Events</h2>
-	  <p>
-	    Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-	  </p>
-	  <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-              Reveal.addEventListener( 'customevent', function() {
-	      console.log( '"customevent" has fired' );
-              } );
-	  </code></pre>
-	</section>
-
-	<section>
-	  <section data-background="#007777">
-	    <h2>Slide Backgrounds</h2>
-	    <p>
-	      Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-	    </p>
-	    <a href="#" class="image navigate-down">
-	      <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-	    </a>
-	  </section>
-	  <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-	    <h2>Image Backgrounds</h2>
-	    <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-	  </section>
-	  <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-	    <h2>Repeated Image Backgrounds</h2>
-	    <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-	  </section>
-	</section>
-
-	<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-	  <h2>Background Transitions</h2>
-	  <p>
-	    Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-	  </p>
-	</section>
-
-	<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-	  <h2>Background Transition Override</h2>
-	  <p>
-	    You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-	  </p>
-	</section>
-
-	<section>
-	  <h2>Intergalactic Interconnections</h2>
-	  <p>
-	    You can link between slides internally,
-	    <a href="#/2/3">like this</a>.
-	  </p>
-	</section>
-
-	<section>
-	  <section id="fragments">
-	    <h2>Fragmented Views</h2>
-	    <p>Hit the next arrow...</p>
-	    <p class="fragment">... to step through ...</p>
-	    <ol>
-	      <li class="fragment"><code>any type</code></li>
-	      <li class="fragment"><em>of view</em></li>
-	      <li class="fragment"><strong>fragments</strong></li>
-	    </ol>
-
-	    <aside class="notes">
-	      This slide has fragments which are also stepped through in the notes window.
-	    </aside>
-	  </section>
-	  <section>
-	    <h2>Fragment Styles</h2>
-	    <p>There's a few styles of fragments, like:</p>
-	    <p class="fragment grow">grow</p>
-	    <p class="fragment shrink">shrink</p>
-	    <p class="fragment roll-in">roll-in</p>
-	    <p class="fragment fade-out">fade-out</p>
-	    <p class="fragment highlight-red">highlight-red</p>
-	    <p class="fragment highlight-green">highlight-green</p>
-	    <p class="fragment highlight-blue">highlight-blue</p>
-	    <p class="fragment current-visible">current-visible</p>
-	    <p class="fragment highlight-current-blue">highlight-current-blue</p>
-	  </section>
-	</section>
-
-	<section>
-	  <h2>Spectacular image!</h2>
-	  <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-	    <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-	  </a>
-	</section>
-
-	<section>
-	  <h2>Export to PDF</h2>
-	  <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-	  <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-	  <script>
-	    document.getElementById('slideshare').attributeName = 'allowfullscreen';
-	  </script>
-	</section>
-
-	<section>
-	  <h2>Take a Moment</h2>
-	  <p>
-	    Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-	    during a presentation.
-	  </p>
-	</section>
-
-	<section>
-	  <h2>Stellar Links</h2>
-	  <ul>
-	    <li><a href="http://slid.es">Try the online editor</a></li>
-	    <li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-	    <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-	  </ul>
-	</section>
-
-	<section>
-	  <h1>THE END</h1>
-	  <h3>BY Hakim El Hattab / hakim.se</h3>
-	</section>
-
+        <section data-background="#000" id="xmas">
+          <h2>Merry Christmas!</h2>
+          <img class="fragment" src="images/gift.png" width="300px">
+          <div id="gift_container">
+            <div id="gift_content">
+              <img id="logo" width="700px" src="images/spotify.jpg">
+              <div id="code"> 
+                XXX XXX XXX XXXX
+              </div>
+              <a id="redeem" href="http://www.spotify.com/redeem">spotify.com/redeem</a>
+            </div>
+          </div>
+          <br><br><br><br><br>
+        </section>
       </div>
 
     </div>

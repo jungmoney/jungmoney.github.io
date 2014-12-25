@@ -1,14 +1,36 @@
-var stop;
 $(document).ready(function(){
-    var count=0;
+    var audio1 = false;
+    var audio2 = false;
+    var audio3 = false;
+    var snow = false;
     Reveal.addEventListener( 'slidechanged', function( event ) {
         // event.previousSlide, event.currentSlide, event.indexh, event.indexv
         console.log(event.currentSlide);
-        count++;
-        console.log(count);
+        if (event.currentSlide.id=="song_2") {
+            if (!audio2) {
+                stop();
+                $('#audio_2')[0].play();
+                audio2 = true;
+            }
+        }
+
+        if (event.currentSlide.id=="song_3") {
+            if (!audio3) {
+                stop();
+                $('#audio_3')[0].play();
+                audio3 = true;
+            }
+        }
+
+        if (event.currentSlide.id=="xmas"){
+            if (!snow){
+                init();
+                snow = true;
+            }
+        }
     });
     
-    stop = function(){
+    var stop = function(){
         $('audio').each(function(){
             this.pause(); // Stop playing
             this.currentTime = 0; // Reset time
@@ -16,5 +38,128 @@ $(document).ready(function(){
     }
 
     $('#audio_1')[0].play();
+    audio1 = true;
+    
 
+    $('.movies_slick').slick({
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        dots: true
+    });
+    
+
+    var SCREEN_WIDTH = window.innerWidth;
+    var SCREEN_HEIGHT = window.innerHeight;
+    var container;
+    var particle;
+    var camera;
+    var scene;
+    var renderer;
+    var mouseX = 0;
+    var mouseY = 0;
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    
+    var particles = []; 
+    var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+    particleImage.src = 'images/ParticleSmoke.png'; 
+    
+    
+    function init() {
+	container = document.createElement('div');
+        container.className="snow_container";
+	document.body.appendChild(container);
+	camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+	camera.position.z = 1000;
+	scene = new THREE.Scene();
+	scene.add(camera);
+	
+	renderer = new THREE.CanvasRenderer();
+	renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+	var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+	
+	for (var i = 0; i < 500; i++) {
+	    particle = new Particle3D( material);
+	    particle.position.x = Math.random() * 2000 - 1000;
+	    particle.position.y = Math.random() * 2000 - 1000;
+	    particle.position.z = Math.random() * 2000 - 1000;
+	    particle.scale.x = particle.scale.y =  1;
+	    scene.add( particle );
+	    
+	    particles.push(particle); 
+	}
+	container.appendChild( renderer.domElement );
+	
+	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+	document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+	document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+	
+	setInterval( loop, 1000 / 60 );
+	
+    }
+    
+    function onDocumentMouseMove( event ) {
+	mouseX = event.clientX - windowHalfX;
+	mouseY = event.clientY - windowHalfY;
+    }
+    function onDocumentTouchStart( event ) {
+	if ( event.touches.length == 1 ) {
+	    event.preventDefault();
+	    mouseX = event.touches[ 0 ].pageX - windowHalfX;
+	    mouseY = event.touches[ 0 ].pageY - windowHalfY;
+	}
+    }
+    function onDocumentTouchMove( event ) {
+	if ( event.touches.length == 1 ) {
+	    event.preventDefault();
+	    mouseX = event.touches[ 0 ].pageX - windowHalfX;
+	    mouseY = event.touches[ 0 ].pageY - windowHalfY;
+	}
+    }
+    //
+    function loop() {
+	for(var i = 0; i<particles.length; i++)
+	{
+	    var particle = particles[i]; 
+	    particle.updatePhysics(); 
+	    
+	    with(particle.position)
+	    {
+		if(y<-1000) y+=2000; 
+		if(x>1000) x-=2000; 
+		else if(x<-1000) x+=2000; 
+		if(z>1000) z-=2000; 
+		else if(z<-1000) z+=2000; 
+	    }				
+	}
+	
+	camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+	camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+	camera.lookAt(scene.position); 
+	renderer.render( scene, camera );
+	
+    }
+
+    $(document).on('click', '#xmas img', function() {
+        
+        $('#gift_container').css({
+            "background-color":"#81b71a",
+        });
+
+        $('#xmas>img').css("cursor", "default");
+
+        $('#xmas>img').animate({
+            opacity: 0
+        }, 1000, function(){
+        });
+
+        $('#gift_container').animate({
+            width: "70%",
+            height: "400px",
+            marginTop: "-300px"
+        }, 1000, function(){
+            $('#gift_content').fadeIn();
+        });
+    });
 });
